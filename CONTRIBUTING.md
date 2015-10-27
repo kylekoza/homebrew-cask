@@ -255,6 +255,14 @@ If everything looks good, you’ll also want to make sure your Cask passes audit
 brew cask audit my-new-cask --download
 ```
 
+And if you have the [`rubocop`](https://github.com/bbatsov/rubocop) gem installed, you should also check stylistic details:
+
+```bash
+rubocop "$(brew --repository)/Library/Taps/caskroom/homebrew-cask/Casks/my-new-cask"
+```
+
+Keep in mind all of these checks will be made when you submit your PR, so by doing them in advance you’re saving everyone a lot of time and trouble.
+
 If your application and homebrew-cask do not work well together, feel free to [file an issue](https://github.com/caskroom/homebrew-cask/issues) after checking out open issues.
 
 ## Finding a Home For Your Cask
